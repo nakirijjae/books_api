@@ -1,0 +1,2001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Feature" tests="44" assertions="62" errors="0" failures="44" skipped="0" time="13.820626">
+    <testsuite name="Tests\Feature\BooksListTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php" tests="7" assertions="25" errors="0" failures="7" skipped="0" time="11.363725">
+      <testcase name="testResponseStructure" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php" line="14" assertions="13" time="10.473822">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testResponseStructure
+Failed asserting that an array has the key 'review'.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:614
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:611
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:616
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:31
+</failure>
+      </testcase>
+      <testcase name="testListWithoutFilters" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php" line="68" assertions="2" time="0.176319">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testListWithoutFilters
+Unable to find JSON: 
+
+[{
+    "data": [
+        {
+            "id": 6,
+            "isbn": "9792360685652",
+            "title": "Nemo porro in dolor sed ad eos.",
+            "description": "Consequuntur mollitia ut velit alias. Iure ipsa nulla rem est.",
+            "authors": [
+                {
+                    "id": 6,
+                    "name": "Wilfrid Reynolds",
+                    "surname": "Trantow"
+                }
+            ],
+            "review": {
+                "avg": 7,
+                "count": 3
+            }
+        },
+        {
+            "id": 7,
+            "isbn": "9784475074278",
+            "title": "Est et minima in sit in.",
+            "description": "Delectus delectus provident et minima distinctio sequi similique. Fuga corporis architecto qui aperiam et quod fuga. Tempore sed assumenda ut voluptatum sit.",
+            "authors": [
+                {
+                    "id": 7,
+                    "name": "Missouri Mitchell",
+                    "surname": "Kassulke"
+                }
+            ],
+            "review": {
+                "avg": 1,
+                "count": 3
+            }
+        },
+        {
+            "id": 8,
+            "isbn": "9787928207018",
+            "title": "Cum alias tempore ut ad itaque molestiae.",
+            "description": "Et voluptates accusantium facere atque qui. Quis saepe consequatur quidem et. Illum et tempora autem ipsam tempora. Cupiditate eius facilis ducimus sed et cumque.",
+            "authors": [
+                {
+                    "id": 8,
+                    "name": "Rosella Konopelski",
+                    "surname": "Botsford"
+                }
+            ],
+            "review": {
+                "avg": 6,
+                "count": 3
+            }
+        },
+        {
+            "id": 9,
+            "isbn": "9782509733740",
+            "title": "Qui qui ut quaerat similique ut similique aut.",
+            "description": "Magni qui unde facilis quibusdam ratione qui voluptates. Quis nulla fuga reiciendis et aliquam ut. Voluptatem assumenda sit blanditiis quae quo voluptas accusantium.",
+            "authors": [
+                {
+                    "id": 9,
+                    "name": "Prof. Jeremy Koch DDS",
+                    "surname": "Skiles"
+                }
+            ],
+            "review": {
+                "avg": 4,
+                "count": 3
+            }
+        },
+        {
+            "id": 10,
+            "isbn": "9784640634320",
+            "title": "Qui perspiciatis quidem labore ex et et.",
+            "description": "Quia est aut sunt commodi impedit et eligendi. Tempore ipsum soluta id. Ea magnam similique et modi illo facere laborum.",
+            "authors": [
+                {
+                    "id": 10,
+                    "name": "Nedra Brakus",
+                    "surname": "Bergstrom"
+                }
+            ],
+            "review": {
+                "avg": 6,
+                "count": 3
+            }
+        }
+    ]
+}]
+
+within response JSON:
+
+[{
+    "data": [
+        {
+            "id": 8,
+            "isbn": "9787928207018",
+            "title": "Cum alias tempore ut ad itaque molestiae.",
+            "description": "Et voluptates accusantium facere atque qui. Quis saepe consequatur quidem et. Illum et tempora autem ipsam tempora. Cupiditate eius facilis ducimus sed et cumque.",
+            "authors": [
+                {
+                    "id": 8,
+                    "name": "Rosella Konopelski",
+                    "surname": "Botsford"
+                }
+            ],
+            "reviews": [
+                {
+                    "review": 9,
+                    "comment": "Ea minima eveniet reiciendis est laboriosam vel. Aut unde amet sed laudantium id omnis. Sapiente beatae voluptatem dolorem ea atque saepe et. Velit qui earum aliquid ut."
+                },
+                {
+                    "review": 9,
+                    "comment": "Et et facilis enim et. Accusantium in earum voluptas cum et rerum. Ab laudantium voluptatem placeat fugiat nihil asperiores corporis hic."
+                },
+                {
+                    "review": 1,
+                    "comment": "Quia eveniet ut quisquam perferendis minima ea. Eligendi tempore accusantium quam asperiores soluta dolor. Sint est consectetur earum expedita laborum doloribus fugiat."
+                }
+            ],
+            "avg_reviews": "6.3333"
+        },
+        {
+            "id": 7,
+            "isbn": "9784475074278",
+            "title": "Est et minima in sit in.",
+            "description": "Delectus delectus provident et minima distinctio sequi similique. Fuga corporis architecto qui aperiam et quod fuga. Tempore sed assumenda ut voluptatum sit.",
+            "authors": [
+                {
+                    "id": 7,
+                    "name": "Missouri Mitchell",
+                    "surname": "Kassulke"
+                }
+            ],
+            "reviews": [
+                {
+                    "review": 2,
+                    "comment": "Eum veniam nihil et voluptates ullam corporis. Autem quas harum culpa. Impedit consequatur minima voluptas nam voluptates reiciendis. Est qui qui maxime harum maxime consequatur est."
+                },
+                {
+                    "review": 1,
+                    "comment": "Voluptatibus maiores soluta odio sed optio qui. Quis sint cum pariatur repellat laudantium. Voluptate incidunt culpa dolorem error similique iure laborum culpa. Odio fugit sapiente aspernatur aut."
+                },
+                {
+                    "review": 1,
+                    "comment": "Assumenda commodi autem aut repudiandae tempore repellat. Eos ut ullam libero temporibus aut culpa eligendi. Possimus culpa ex alias ab atque ut qui. Iusto veniam et et modi vitae."
+                }
+            ],
+            "avg_reviews": "1.3333"
+        },
+        {
+            "id": 6,
+            "isbn": "9792360685652",
+            "title": "Nemo porro in dolor sed ad eos.",
+            "description": "Consequuntur mollitia ut velit alias. Iure ipsa nulla rem est.",
+            "authors": [
+                {
+                    "id": 6,
+                    "name": "Wilfrid Reynolds",
+                    "surname": "Trantow"
+                }
+            ],
+            "reviews": [
+                {
+                    "review": 6,
+                    "comment": "A et similique ut debitis sit. Sequi suscipit cum eum illo reiciendis laboriosam rem. Dolorum quo cupiditate ut rerum ut vel. Pariatur aliquid quaerat fuga tempore natus voluptas provident."
+                },
+                {
+                    "review": 4,
+                    "comment": "Nostrum eius voluptates ut et molestiae non dolores impedit. Est repudiandae perspiciatis numquam vitae illo qui aut ut."
+                },
+                {
+                    "review": 10,
+                    "comment": "Eos aut fugit alias laborum autem sint. Repellat laborum voluptatem autem aut non ullam quas omnis. Reiciendis sed nulla qui doloribus. Magnam et hic eligendi doloribus corporis et alias."
+                }
+            ],
+            "avg_reviews": "6.6667"
+        },
+        {
+            "id": 10,
+            "isbn": "9784640634320",
+            "title": "Qui perspiciatis quidem labore ex et et.",
+            "description": "Quia est aut sunt commodi impedit et eligendi. Tempore ipsum soluta id. Ea magnam similique et modi illo facere laborum.",
+            "authors": [
+                {
+                    "id": 10,
+                    "name": "Nedra Brakus",
+                    "surname": "Bergstrom"
+                }
+            ],
+            "reviews": [
+                {
+                    "review": 7,
+                    "comment": "Et nihil aut eaque repellat impedit vel non. Qui omnis consequuntur neque pariatur. Dolores autem eveniet sit velit quia est iure ut. Ullam iusto error et quia minus suscipit."
+                },
+                {
+                    "review": 5,
+                    "comment": "Laboriosam ea veritatis in aut ut. Temporibus illum odit labore eos. Vero dolor ut voluptate tenetur repudiandae velit unde."
+                },
+                {
+                    "review": 6,
+                    "comment": "Adipisci omnis quos sint eius id asperiores. Dicta ut nulla accusantium occaecati. Eum accusantium doloribus quae qui itaque et."
+                }
+            ],
+            "avg_reviews": "6.0000"
+        },
+        {
+            "id": 9,
+            "isbn": "9782509733740",
+            "title": "Qui qui ut quaerat similique ut similique aut.",
+            "description": "Magni qui unde facilis quibusdam ratione qui voluptates. Quis nulla fuga reiciendis et aliquam ut. Voluptatem assumenda sit blanditiis quae quo voluptas accusantium.",
+            "authors": [
+                {
+                    "id": 9,
+                    "name": "Prof. Jeremy Koch DDS",
+                    "surname": "Skiles"
+                }
+            ],
+            "reviews": [
+                {
+                    "review": 1,
+                    "comment": "Rem dicta est accusamus libero corrupti eos modi. Qui eligendi doloribus atque aspernatur. Veritatis dolores quam sunt."
+                },
+                {
+                    "review": 3,
+                    "comment": "Commodi fugit vitae fugiat labore quidem. Quis harum modi voluptatem soluta. Non nobis neque tempore eos consequatur. Ea voluptatem eligendi animi voluptate. Voluptas nesciunt qui qui."
+                },
+                {
+                    "review": 9,
+                    "comment": "Alias qui hic reiciendis ut nemo corrupti repudiandae. Cupiditate et amet similique aut. Beatae et consequuntur temporibus eius quae aut quis."
+                }
+            ],
+            "avg_reviews": "4.3333"
+        }
+    ]
+}].
+
+
+Failed asserting that an array has the subset Array &amp;0 (
+    'data' =&gt; Array &amp;1 (
+        0 =&gt; Array &amp;2 (
+            'id' =&gt; 6
+            'isbn' =&gt; '9792360685652'
+            'title' =&gt; 'Nemo porro in dolor sed ad eos.'
+            'description' =&gt; 'Consequuntur mollitia ut velit alias. Iure ipsa nulla rem est.'
+            'authors' =&gt; Array &amp;3 (
+                0 =&gt; Array &amp;4 (
+                    'id' =&gt; 6
+                    'name' =&gt; 'Wilfrid Reynolds'
+                    'surname' =&gt; 'Trantow'
+                )
+            )
+            'review' =&gt; Array &amp;5 (
+                'avg' =&gt; 7
+                'count' =&gt; 3
+            )
+        )
+        1 =&gt; Array &amp;6 (
+            'id' =&gt; 7
+            'isbn' =&gt; '9784475074278'
+            'title' =&gt; 'Est et minima in sit in.'
+            'description' =&gt; 'Delectus delectus provident et minima distinctio sequi similique. Fuga corporis architecto qui aperiam et quod fuga. Tempore sed assumenda ut voluptatum sit.'
+            'authors' =&gt; Array &amp;7 (
+                0 =&gt; Array &amp;8 (
+                    'id' =&gt; 7
+                    'name' =&gt; 'Missouri Mitchell'
+                    'surname' =&gt; 'Kassulke'
+                )
+            )
+            'review' =&gt; Array &amp;9 (
+                'avg' =&gt; 1
+                'count' =&gt; 3
+            )
+        )
+        2 =&gt; Array &amp;10 (
+            'id' =&gt; 8
+            'isbn' =&gt; '9787928207018'
+            'title' =&gt; 'Cum alias tempore ut ad itaque molestiae.'
+            'description' =&gt; 'Et voluptates accusantium facere atque qui. Quis saepe consequatur quidem et. Illum et tempora autem ipsam tempora. Cupiditate eius facilis ducimus sed et cumque.'
+            'authors' =&gt; Array &amp;11 (
+                0 =&gt; Array &amp;12 (
+                    'id' =&gt; 8
+                    'name' =&gt; 'Rosella Konopelski'
+                    'surname' =&gt; 'Botsford'
+                )
+            )
+            'review' =&gt; Array &amp;13 (
+                'avg' =&gt; 6
+                'count' =&gt; 3
+            )
+        )
+        3 =&gt; Array &amp;14 (
+            'id' =&gt; 9
+            'isbn' =&gt; '9782509733740'
+            'title' =&gt; 'Qui qui ut quaerat similique ut similique aut.'
+            'description' =&gt; 'Magni qui unde facilis quibusdam ratione qui voluptates. Quis nulla fuga reiciendis et aliquam ut. Voluptatem assumenda sit blanditiis quae quo voluptas accusantium.'
+            'authors' =&gt; Array &amp;15 (
+                0 =&gt; Array &amp;16 (
+                    'id' =&gt; 9
+                    'name' =&gt; 'Prof. Jeremy Koch DDS'
+                    'surname' =&gt; 'Skiles'
+                )
+            )
+            'review' =&gt; Array &amp;17 (
+                'avg' =&gt; 4
+                'count' =&gt; 3
+            )
+        )
+        4 =&gt; Array &amp;18 (
+            'id' =&gt; 10
+            'isbn' =&gt; '9784640634320'
+            'title' =&gt; 'Qui perspiciatis quidem labore ex et et.'
+            'description' =&gt; 'Quia est aut sunt commodi impedit et eligendi. Tempore ipsum soluta id. Ea magnam similique et modi illo facere laborum.'
+            'authors' =&gt; Array &amp;19 (
+                0 =&gt; Array &amp;20 (
+                    'id' =&gt; 10
+                    'name' =&gt; 'Nedra Brakus'
+                    'surname' =&gt; 'Bergstrom'
+                )
+            )
+            'review' =&gt; Array &amp;21 (
+                'avg' =&gt; 6
+                'count' =&gt; 3
+            )
+        )
+    )
+).
+--- Expected
++++ Actual
+@@ @@
+   array (
+     0 =&gt; 
+     array (
+-      'id' =&gt; 6,
+-      'isbn' =&gt; '9792360685652',
+-      'title' =&gt; 'Nemo porro in dolor sed ad eos.',
+-      'description' =&gt; 'Consequuntur mollitia ut velit alias. Iure ipsa nulla rem est.',
++      'id' =&gt; 8,
++      'isbn' =&gt; '9787928207018',
++      'title' =&gt; 'Cum alias tempore ut ad itaque molestiae.',
++      'description' =&gt; 'Et voluptates accusantium facere atque qui. Quis saepe consequatur quidem et. Illum et tempora autem ipsam tempora. Cupiditate eius facilis ducimus sed et cumque.',
+       'authors' =&gt; 
+       array (
+         0 =&gt; 
+         array (
+-          'id' =&gt; 6,
+-          'name' =&gt; 'Wilfrid Reynolds',
+-          'surname' =&gt; 'Trantow',
++          'id' =&gt; 8,
++          'name' =&gt; 'Rosella Konopelski',
++          'surname' =&gt; 'Botsford',
+         ),
+       ),
+       'reviews' =&gt; 
+@@ @@
+         ),
+       ),
+       'avg_reviews' =&gt; '6.3333',
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 7,
+-        'count' =&gt; 3,
+-      ),
+     ),
+     1 =&gt; 
+     array (
+@@ @@
+         ),
+       ),
+       'avg_reviews' =&gt; '1.3333',
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 1,
+-        'count' =&gt; 3,
+-      ),
+     ),
+     2 =&gt; 
+     array (
+-      'id' =&gt; 8,
+-      'isbn' =&gt; '9787928207018',
+-      'title' =&gt; 'Cum alias tempore ut ad itaque molestiae.',
+-      'description' =&gt; 'Et voluptates accusantium facere atque qui. Quis saepe consequatur quidem et. Illum et tempora autem ipsam tempora. Cupiditate eius facilis ducimus sed et cumque.',
++      'id' =&gt; 6,
++      'isbn' =&gt; '9792360685652',
++      'title' =&gt; 'Nemo porro in dolor sed ad eos.',
++      'description' =&gt; 'Consequuntur mollitia ut velit alias. Iure ipsa nulla rem est.',
+       'authors' =&gt; 
+       array (
+         0 =&gt; 
+         array (
+-          'id' =&gt; 8,
+-          'name' =&gt; 'Rosella Konopelski',
+-          'surname' =&gt; 'Botsford',
++          'id' =&gt; 6,
++          'name' =&gt; 'Wilfrid Reynolds',
++          'surname' =&gt; 'Trantow',
+         ),
+       ),
+       'reviews' =&gt; 
+@@ @@
+         ),
+       ),
+       'avg_reviews' =&gt; '6.6667',
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 6,
+-        'count' =&gt; 3,
+-      ),
+     ),
+     3 =&gt; 
+     array (
+-      'id' =&gt; 9,
+-      'isbn' =&gt; '9782509733740',
+-      'title' =&gt; 'Qui qui ut quaerat similique ut similique aut.',
+-      'description' =&gt; 'Magni qui unde facilis quibusdam ratione qui voluptates. Quis nulla fuga reiciendis et aliquam ut. Voluptatem assumenda sit blanditiis quae quo voluptas accusantium.',
++      'id' =&gt; 10,
++      'isbn' =&gt; '9784640634320',
++      'title' =&gt; 'Qui perspiciatis quidem labore ex et et.',
++      'description' =&gt; 'Quia est aut sunt commodi impedit et eligendi. Tempore ipsum soluta id. Ea magnam similique et modi illo facere laborum.',
+       'authors' =&gt; 
+       array (
+         0 =&gt; 
+         array (
+-          'id' =&gt; 9,
+-          'name' =&gt; 'Prof. Jeremy Koch DDS',
+-          'surname' =&gt; 'Skiles',
++          'id' =&gt; 10,
++          'name' =&gt; 'Nedra Brakus',
++          'surname' =&gt; 'Bergstrom',
+         ),
+       ),
+       'reviews' =&gt; 
+@@ @@
+         ),
+       ),
+       'avg_reviews' =&gt; '6.0000',
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 4,
+-        'count' =&gt; 3,
+-      ),
+     ),
+     4 =&gt; 
+     array (
+-      'id' =&gt; 10,
+-      'isbn' =&gt; '9784640634320',
+-      'title' =&gt; 'Qui perspiciatis quidem labore ex et et.',
+-      'description' =&gt; 'Quia est aut sunt commodi impedit et eligendi. Tempore ipsum soluta id. Ea magnam similique et modi illo facere laborum.',
++      'id' =&gt; 9,
++      'isbn' =&gt; '9782509733740',
++      'title' =&gt; 'Qui qui ut quaerat similique ut similique aut.',
++      'description' =&gt; 'Magni qui unde facilis quibusdam ratione qui voluptates. Quis nulla fuga reiciendis et aliquam ut. Voluptatem assumenda sit blanditiis quae quo voluptas accusantium.',
+       'authors' =&gt; 
+       array (
+         0 =&gt; 
+         array (
+-          'id' =&gt; 10,
+-          'name' =&gt; 'Nedra Brakus',
+-          'surname' =&gt; 'Bergstrom',
++          'id' =&gt; 9,
++          'name' =&gt; 'Prof. Jeremy Koch DDS',
++          'surname' =&gt; 'Skiles',
+         ),
+       ),
+       'reviews' =&gt; 
+@@ @@
+         ),
+       ),
+       'avg_reviews' =&gt; '4.3333',
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 6,
+-        'count' =&gt; 3,
+-      ),
+     ),
+   ),
+ )
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Assert.php:40
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:443
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:206
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:85
+</failure>
+      </testcase>
+      <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php" line="88" assertions="2" time="0.406291">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testTitleFilter
+Unable to find JSON: 
+
+[{
+    "data": [
+        {
+            "id": 11,
+            "isbn": "9797804758299",
+            "title": "PHP for begginers",
+            "description": "Nemo dolores voluptatibus optio consequatur voluptatum magni atque itaque. Quas esse dignissimos animi et est dicta.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        }
+    ]
+}]
+
+within response JSON:
+
+[{
+    "data": []
+}].
+
+
+Failed asserting that an array has the subset Array &amp;0 (
+    'data' =&gt; Array &amp;1 (
+        0 =&gt; Array &amp;2 (
+            'id' =&gt; 11
+            'isbn' =&gt; '9797804758299'
+            'title' =&gt; 'PHP for begginers'
+            'description' =&gt; 'Nemo dolores voluptatibus optio consequatur voluptatum magni atque itaque. Quas esse dignissimos animi et est dicta.'
+            'authors' =&gt; Array &amp;3 ()
+            'review' =&gt; Array &amp;4 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+    )
+).
+--- Expected
++++ Actual
+@@ @@
+ array (
+   'data' =&gt; 
+   array (
+-    0 =&gt; 
+-    array (
+-      'id' =&gt; 11,
+-      'isbn' =&gt; '9797804758299',
+-      'title' =&gt; 'PHP for begginers',
+-      'description' =&gt; 'Nemo dolores voluptatibus optio consequatur voluptatum magni atque itaque. Quas esse dignissimos animi et est dicta.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+   ),
+ )
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Assert.php:40
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:443
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:206
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:97
+</failure>
+      </testcase>
+      <testcase name="testAuthorsFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php" line="105" assertions="2" time="0.070880">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testAuthorsFilter
+Unable to find JSON: 
+
+[{
+    "data": [
+        {
+            "id": 14,
+            "isbn": "9799218715196",
+            "title": "PHP for begginers",
+            "description": "Ex ipsam debitis aliquam et dolorem. Et iste sed quasi. Modi perspiciatis ullam exercitationem ut repellat deserunt et.",
+            "authors": [
+                {
+                    "id": 11,
+                    "name": "Henderson Swift MD",
+                    "surname": "Hamill"
+                },
+                {
+                    "id": 12,
+                    "name": "Joy Stokes",
+                    "surname": "Beahan"
+                }
+            ],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 15,
+            "isbn": "9794223507316",
+            "title": "Javascript for dummies",
+            "description": "Aliquam facilis voluptatem nostrum dicta nam ut quia. Saepe et vel dolor nisi occaecati. Saepe qui sit dolor totam a perferendis dolor perferendis.",
+            "authors": [
+                {
+                    "id": 11,
+                    "name": "Henderson Swift MD",
+                    "surname": "Hamill"
+                }
+            ],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        }
+    ]
+}]
+
+within response JSON:
+
+[{
+    "data": []
+}].
+
+
+Failed asserting that an array has the subset Array &amp;0 (
+    'data' =&gt; Array &amp;1 (
+        0 =&gt; Array &amp;2 (
+            'id' =&gt; 14
+            'isbn' =&gt; '9799218715196'
+            'title' =&gt; 'PHP for begginers'
+            'description' =&gt; 'Ex ipsam debitis aliquam et dolorem. Et iste sed quasi. Modi perspiciatis ullam exercitationem ut repellat deserunt et.'
+            'authors' =&gt; Array &amp;3 (
+                0 =&gt; Array &amp;4 (
+                    'id' =&gt; 11
+                    'name' =&gt; 'Henderson Swift MD'
+                    'surname' =&gt; 'Hamill'
+                )
+                1 =&gt; Array &amp;5 (
+                    'id' =&gt; 12
+                    'name' =&gt; 'Joy Stokes'
+                    'surname' =&gt; 'Beahan'
+                )
+            )
+            'review' =&gt; Array &amp;6 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        1 =&gt; Array &amp;7 (
+            'id' =&gt; 15
+            'isbn' =&gt; '9794223507316'
+            'title' =&gt; 'Javascript for dummies'
+            'description' =&gt; 'Aliquam facilis voluptatem nostrum dicta nam ut quia. Saepe et vel dolor nisi occaecati. Saepe qui sit dolor totam a perferendis dolor perferendis.'
+            'authors' =&gt; Array &amp;8 (
+                0 =&gt; Array &amp;9 (
+                    'id' =&gt; 11
+                    'name' =&gt; 'Henderson Swift MD'
+                    'surname' =&gt; 'Hamill'
+                )
+            )
+            'review' =&gt; Array &amp;10 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+    )
+).
+--- Expected
++++ Actual
+@@ @@
+ array (
+   'data' =&gt; 
+   array (
+-    0 =&gt; 
+-    array (
+-      'id' =&gt; 14,
+-      'isbn' =&gt; '9799218715196',
+-      'title' =&gt; 'PHP for begginers',
+-      'description' =&gt; 'Ex ipsam debitis aliquam et dolorem. Et iste sed quasi. Modi perspiciatis ullam exercitationem ut repellat deserunt et.',
+-      'authors' =&gt; 
+-      array (
+-        0 =&gt; 
+-        array (
+-          'id' =&gt; 11,
+-          'name' =&gt; 'Henderson Swift MD',
+-          'surname' =&gt; 'Hamill',
+-        ),
+-        1 =&gt; 
+-        array (
+-          'id' =&gt; 12,
+-          'name' =&gt; 'Joy Stokes',
+-          'surname' =&gt; 'Beahan',
+-        ),
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    1 =&gt; 
+-    array (
+-      'id' =&gt; 15,
+-      'isbn' =&gt; '9794223507316',
+-      'title' =&gt; 'Javascript for dummies',
+-      'description' =&gt; 'Aliquam facilis voluptatem nostrum dicta nam ut quia. Saepe et vel dolor nisi occaecati. Saepe qui sit dolor totam a perferendis dolor perferendis.',
+-      'authors' =&gt; 
+-      array (
+-        0 =&gt; 
+-        array (
+-          'id' =&gt; 11,
+-          'name' =&gt; 'Henderson Swift MD',
+-          'surname' =&gt; 'Hamill',
+-        ),
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+   ),
+ )
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Assert.php:40
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:443
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:206
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:123
+</failure>
+      </testcase>
+      <testcase name="testTitleSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php" line="136" assertions="2" time="0.065556">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testTitleSort
+Unable to find JSON: 
+
+[{
+    "data": [
+        {
+            "id": 19,
+            "isbn": "9789978059869",
+            "title": "Advanced Python",
+            "description": "Necessitatibus voluptas ipsa mollitia aut. Eum ipsum autem veritatis consequatur delectus nobis.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 18,
+            "isbn": "9790581134027",
+            "title": "Javascript for dummies",
+            "description": "Omnis dolore ut esse tempora ab quod officiis. Tempora et quae modi perspiciatis. Atque accusantium nobis exercitationem incidunt quae id in.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 17,
+            "isbn": "9790101447477",
+            "title": "PHP for begginers",
+            "description": "Pariatur ut molestiae ex alias. Accusamus voluptatem et magni alias et ducimus. Voluptas sint laborum suscipit voluptatem placeat. Dolorem reprehenderit distinctio eaque qui.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        }
+    ]
+}]
+
+within response JSON:
+
+[{
+    "data": []
+}].
+
+
+Failed asserting that an array has the subset Array &amp;0 (
+    'data' =&gt; Array &amp;1 (
+        0 =&gt; Array &amp;2 (
+            'id' =&gt; 19
+            'isbn' =&gt; '9789978059869'
+            'title' =&gt; 'Advanced Python'
+            'description' =&gt; 'Necessitatibus voluptas ipsa mollitia aut. Eum ipsum autem veritatis consequatur delectus nobis.'
+            'authors' =&gt; Array &amp;3 ()
+            'review' =&gt; Array &amp;4 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        1 =&gt; Array &amp;5 (
+            'id' =&gt; 18
+            'isbn' =&gt; '9790581134027'
+            'title' =&gt; 'Javascript for dummies'
+            'description' =&gt; 'Omnis dolore ut esse tempora ab quod officiis. Tempora et quae modi perspiciatis. Atque accusantium nobis exercitationem incidunt quae id in.'
+            'authors' =&gt; Array &amp;6 ()
+            'review' =&gt; Array &amp;7 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        2 =&gt; Array &amp;8 (
+            'id' =&gt; 17
+            'isbn' =&gt; '9790101447477'
+            'title' =&gt; 'PHP for begginers'
+            'description' =&gt; 'Pariatur ut molestiae ex alias. Accusamus voluptatem et magni alias et ducimus. Voluptas sint laborum suscipit voluptatem placeat. Dolorem reprehenderit distinctio eaque qui.'
+            'authors' =&gt; Array &amp;9 ()
+            'review' =&gt; Array &amp;10 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+    )
+).
+--- Expected
++++ Actual
+@@ @@
+ array (
+   'data' =&gt; 
+   array (
+-    0 =&gt; 
+-    array (
+-      'id' =&gt; 19,
+-      'isbn' =&gt; '9789978059869',
+-      'title' =&gt; 'Advanced Python',
+-      'description' =&gt; 'Necessitatibus voluptas ipsa mollitia aut. Eum ipsum autem veritatis consequatur delectus nobis.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    1 =&gt; 
+-    array (
+-      'id' =&gt; 18,
+-      'isbn' =&gt; '9790581134027',
+-      'title' =&gt; 'Javascript for dummies',
+-      'description' =&gt; 'Omnis dolore ut esse tempora ab quod officiis. Tempora et quae modi perspiciatis. Atque accusantium nobis exercitationem incidunt quae id in.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    2 =&gt; 
+-    array (
+-      'id' =&gt; 17,
+-      'isbn' =&gt; '9790101447477',
+-      'title' =&gt; 'PHP for begginers',
+-      'description' =&gt; 'Pariatur ut molestiae ex alias. Accusamus voluptatem et magni alias et ducimus. Voluptas sint laborum suscipit voluptatem placeat. Dolorem reprehenderit distinctio eaque qui.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+   ),
+ )
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Assert.php:40
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:443
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:206
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:145
+</failure>
+      </testcase>
+      <testcase name="testAvgReviewSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php" line="153" assertions="2" time="0.073663">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testAvgReviewSort
+Unable to find JSON: 
+
+[{
+    "data": [
+        {
+            "id": 22,
+            "isbn": "9796385949041",
+            "title": "Advanced Python",
+            "description": "Voluptates accusamus reiciendis molestias sed. Ut nemo facere recusandae officia qui officiis. Architecto eos quos possimus qui ullam velit. Sunt totam modi dolorem voluptatibus.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 20,
+            "isbn": "9793183522162",
+            "title": "PHP for begginers",
+            "description": "In aliquid quis ut magnam suscipit aperiam voluptatem aut. Voluptatem labore et sint illo occaecati. Nemo eum qui ducimus quae esse. Dolorem corrupti ad molestias dicta laudantium consequatur.",
+            "authors": [],
+            "review": {
+                "avg": 3,
+                "count": 2
+            }
+        },
+        {
+            "id": 21,
+            "isbn": "9799421631702",
+            "title": "Javascript for dummies",
+            "description": "Sunt aperiam est dolor temporibus voluptatem et expedita nulla. Quam et rerum sit quos. Quaerat sint iste dignissimos odit sunt. Quisquam aperiam consequatur vero sed ut nam.",
+            "authors": [],
+            "review": {
+                "avg": 6,
+                "count": 2
+            }
+        }
+    ]
+}]
+
+within response JSON:
+
+[{
+    "data": [
+        {
+            "id": 21,
+            "isbn": "9799421631702",
+            "title": "Javascript for dummies",
+            "description": "Sunt aperiam est dolor temporibus voluptatem et expedita nulla. Quam et rerum sit quos. Quaerat sint iste dignissimos odit sunt. Quisquam aperiam consequatur vero sed ut nam.",
+            "authors": [],
+            "reviews": [
+                {
+                    "review": 4,
+                    "comment": "Dolores ullam ad debitis optio nesciunt rem. Omnis rerum aut et et. Repellat unde unde voluptas aspernatur. Et accusantium temporibus recusandae assumenda repellat possimus minus."
+                },
+                {
+                    "review": 8,
+                    "comment": "Animi similique et ipsa voluptatum. Itaque dolores illum et nostrum natus. Non ad quae nam aliquid aut."
+                }
+            ],
+            "avg_reviews": "6.0000"
+        },
+        {
+            "id": 20,
+            "isbn": "9793183522162",
+            "title": "PHP for begginers",
+            "description": "In aliquid quis ut magnam suscipit aperiam voluptatem aut. Voluptatem labore et sint illo occaecati. Nemo eum qui ducimus quae esse. Dolorem corrupti ad molestias dicta laudantium consequatur.",
+            "authors": [],
+            "reviews": [
+                {
+                    "review": 1,
+                    "comment": "Error minus adipisci eligendi amet rerum doloremque soluta. Ratione eius consequatur labore laboriosam vero beatae tenetur. Quaerat ea vitae quod dignissimos occaecati fugit minima quae."
+                },
+                {
+                    "review": 5,
+                    "comment": "Nihil veritatis nisi omnis id voluptas laudantium libero et. Error aut molestias labore dolorum. Aut voluptas deserunt aut enim illum quasi similique."
+                }
+            ],
+            "avg_reviews": "3.0000"
+        }
+    ]
+}].
+
+
+Failed asserting that an array has the subset Array &amp;0 (
+    'data' =&gt; Array &amp;1 (
+        0 =&gt; Array &amp;2 (
+            'id' =&gt; 22
+            'isbn' =&gt; '9796385949041'
+            'title' =&gt; 'Advanced Python'
+            'description' =&gt; 'Voluptates accusamus reiciendis molestias sed. Ut nemo facere recusandae officia qui officiis. Architecto eos quos possimus qui ullam velit. Sunt totam modi dolorem voluptatibus.'
+            'authors' =&gt; Array &amp;3 ()
+            'review' =&gt; Array &amp;4 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        1 =&gt; Array &amp;5 (
+            'id' =&gt; 20
+            'isbn' =&gt; '9793183522162'
+            'title' =&gt; 'PHP for begginers'
+            'description' =&gt; 'In aliquid quis ut magnam suscipit aperiam voluptatem aut. Voluptatem labore et sint illo occaecati. Nemo eum qui ducimus quae esse. Dolorem corrupti ad molestias dicta laudantium consequatur.'
+            'authors' =&gt; Array &amp;6 ()
+            'review' =&gt; Array &amp;7 (
+                'avg' =&gt; 3
+                'count' =&gt; 2
+            )
+        )
+        2 =&gt; Array &amp;8 (
+            'id' =&gt; 21
+            'isbn' =&gt; '9799421631702'
+            'title' =&gt; 'Javascript for dummies'
+            'description' =&gt; 'Sunt aperiam est dolor temporibus voluptatem et expedita nulla. Quam et rerum sit quos. Quaerat sint iste dignissimos odit sunt. Quisquam aperiam consequatur vero sed ut nam.'
+            'authors' =&gt; Array &amp;9 ()
+            'review' =&gt; Array &amp;10 (
+                'avg' =&gt; 6
+                'count' =&gt; 2
+            )
+        )
+    )
+).
+--- Expected
++++ Actual
+@@ @@
+   array (
+     0 =&gt; 
+     array (
+-      'id' =&gt; 22,
+-      'isbn' =&gt; '9796385949041',
+-      'title' =&gt; 'Advanced Python',
+-      'description' =&gt; 'Voluptates accusamus reiciendis molestias sed. Ut nemo facere recusandae officia qui officiis. Architecto eos quos possimus qui ullam velit. Sunt totam modi dolorem voluptatibus.',
++      'id' =&gt; 21,
++      'isbn' =&gt; '9799421631702',
++      'title' =&gt; 'Javascript for dummies',
++      'description' =&gt; 'Sunt aperiam est dolor temporibus voluptatem et expedita nulla. Quam et rerum sit quos. Quaerat sint iste dignissimos odit sunt. Quisquam aperiam consequatur vero sed ut nam.',
+       'authors' =&gt; 
+       array (
+       ),
+@@ @@
+         ),
+       ),
+       'avg_reviews' =&gt; '6.0000',
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+     ),
+     1 =&gt; 
+     array (
+@@ @@
+         ),
+       ),
+       'avg_reviews' =&gt; '3.0000',
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 3,
+-        'count' =&gt; 2,
+-      ),
+-    ),
+-    2 =&gt; 
+-    array (
+-      'id' =&gt; 21,
+-      'isbn' =&gt; '9799421631702',
+-      'title' =&gt; 'Javascript for dummies',
+-      'description' =&gt; 'Sunt aperiam est dolor temporibus voluptatem et expedita nulla. Quam et rerum sit quos. Quaerat sint iste dignissimos odit sunt. Quisquam aperiam consequatur vero sed ut nam.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 6,
+-        'count' =&gt; 2,
+-      ),
+     ),
+   ),
+ )
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Assert.php:40
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:443
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:206
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:176
+</failure>
+      </testcase>
+      <testcase name="testPagination" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php" line="184" assertions="2" time="0.097194">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testPagination
+Unable to find JSON: 
+
+[{
+    "data": [
+        {
+            "id": 23,
+            "isbn": "9787324065489",
+            "title": "Amet quo quos consequatur deserunt omnis qui.",
+            "description": "Quos quo ut illum. Velit minima enim ea excepturi similique. Culpa facilis exercitationem eos tempore. Blanditiis minus ut deleniti.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 24,
+            "isbn": "9792957957049",
+            "title": "Sed laboriosam ipsa consequatur exercitationem.",
+            "description": "Blanditiis et voluptatem nisi architecto ut vero. Voluptatum asperiores sed sunt. Dolores impedit iusto quia nisi omnis molestias culpa.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 25,
+            "isbn": "9781560498223",
+            "title": "Molestiae beatae omnis placeat eos.",
+            "description": "Corrupti perferendis est voluptas eos atque id est. Sunt natus repellendus enim quia blanditiis aut qui. Vel qui voluptatem vel quae nemo. Modi fuga sit quia tenetur dolor et nostrum.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 26,
+            "isbn": "9786037451213",
+            "title": "Et dolorem culpa et nobis.",
+            "description": "Quisquam molestiae atque ducimus recusandae quo. Iusto beatae quod laborum hic dolorem voluptate delectus.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 27,
+            "isbn": "9786460354549",
+            "title": "At libero aut dolorem.",
+            "description": "Dolores non natus illum quia repellendus et eaque ut. Rem voluptatem sint corporis repudiandae aspernatur sit. Illo sed maiores ea. Quod provident officiis et est.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 28,
+            "isbn": "9784051372224",
+            "title": "Dolores unde magnam iusto architecto voluptates voluptate nihil vel.",
+            "description": "Consequatur omnis quae eum dolore a aliquam impedit quibusdam. Excepturi alias asperiores magni delectus sequi soluta. Nam adipisci consequatur maxime qui assumenda quia nihil.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 29,
+            "isbn": "9780584138320",
+            "title": "Consequuntur officiis aperiam excepturi autem exercitationem et molestiae.",
+            "description": "Qui nisi mollitia dolorum excepturi et. Rerum autem ut aliquid at voluptas. Accusantium repellat error labore debitis.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 30,
+            "isbn": "9787750625530",
+            "title": "Est commodi aut cupiditate unde quia.",
+            "description": "Mollitia doloribus quo est pariatur voluptatem laborum non. Similique est voluptas qui autem dicta aperiam vero. Corporis quia optio aut corporis dolorem.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 31,
+            "isbn": "9787690053301",
+            "title": "Labore dolorem aliquam nihil.",
+            "description": "Voluptate ratione blanditiis omnis rerum suscipit et voluptatem minus. Qui culpa mollitia quia et dolorum soluta quis itaque. Aut eos optio repellat et facere. Ut ipsa quia veniam nostrum qui et id.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 32,
+            "isbn": "9793691745619",
+            "title": "Repellat sit repellendus odit et et ut omnis.",
+            "description": "Et est ullam voluptatem eos neque. Eos pariatur eum inventore sed ea. Qui et quam ab consequatur non delectus ullam. Omnis eum eveniet voluptate et esse placeat.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 33,
+            "isbn": "9785055037553",
+            "title": "Voluptatem fugit aut ducimus.",
+            "description": "Similique id ratione eos ad ex vero nam. Porro alias commodi ea optio rerum fugit. Explicabo vitae est eaque ratione.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 34,
+            "isbn": "9783407622327",
+            "title": "Dolorem quia modi voluptatem voluptas.",
+            "description": "Qui voluptatem quisquam qui esse. Libero eos vel eius nesciunt fugit. Vel quis placeat omnis temporibus quidem vitae exercitationem. Et suscipit veritatis veritatis velit hic molestiae.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 35,
+            "isbn": "9780033881272",
+            "title": "Ducimus est alias rerum laborum molestiae pariatur.",
+            "description": "Harum minima velit nobis ut et numquam. Eos aut modi omnis quam nulla iure sunt. Totam odio vitae fuga sit magnam laboriosam autem animi.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 36,
+            "isbn": "9799045096154",
+            "title": "Doloribus et aut debitis commodi ipsa.",
+            "description": "Consequuntur sunt molestias debitis. Quis et quia cupiditate. Voluptatibus provident nisi commodi quis ut.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        },
+        {
+            "id": 37,
+            "isbn": "9794953771049",
+            "title": "Voluptatem quam ratione modi molestiae deleniti pariatur qui.",
+            "description": "Omnis explicabo sapiente aut ea doloremque. Voluptatem nulla ut sit id laboriosam est. Rerum doloribus aliquam quisquam nulla vel et asperiores.",
+            "authors": [],
+            "review": {
+                "avg": 0,
+                "count": 0
+            }
+        }
+    ]
+}]
+
+within response JSON:
+
+[{
+    "data": []
+}].
+
+
+Failed asserting that an array has the subset Array &amp;0 (
+    'data' =&gt; Array &amp;1 (
+        0 =&gt; Array &amp;2 (
+            'id' =&gt; 23
+            'isbn' =&gt; '9787324065489'
+            'title' =&gt; 'Amet quo quos consequatur deserunt omnis qui.'
+            'description' =&gt; 'Quos quo ut illum. Velit minima enim ea excepturi similique. Culpa facilis exercitationem eos tempore. Blanditiis minus ut deleniti.'
+            'authors' =&gt; Array &amp;3 ()
+            'review' =&gt; Array &amp;4 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        1 =&gt; Array &amp;5 (
+            'id' =&gt; 24
+            'isbn' =&gt; '9792957957049'
+            'title' =&gt; 'Sed laboriosam ipsa consequatur exercitationem.'
+            'description' =&gt; 'Blanditiis et voluptatem nisi architecto ut vero. Voluptatum asperiores sed sunt. Dolores impedit iusto quia nisi omnis molestias culpa.'
+            'authors' =&gt; Array &amp;6 ()
+            'review' =&gt; Array &amp;7 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        2 =&gt; Array &amp;8 (
+            'id' =&gt; 25
+            'isbn' =&gt; '9781560498223'
+            'title' =&gt; 'Molestiae beatae omnis placeat eos.'
+            'description' =&gt; 'Corrupti perferendis est voluptas eos atque id est. Sunt natus repellendus enim quia blanditiis aut qui. Vel qui voluptatem vel quae nemo. Modi fuga sit quia tenetur dolor et nostrum.'
+            'authors' =&gt; Array &amp;9 ()
+            'review' =&gt; Array &amp;10 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        3 =&gt; Array &amp;11 (
+            'id' =&gt; 26
+            'isbn' =&gt; '9786037451213'
+            'title' =&gt; 'Et dolorem culpa et nobis.'
+            'description' =&gt; 'Quisquam molestiae atque ducimus recusandae quo. Iusto beatae quod laborum hic dolorem voluptate delectus.'
+            'authors' =&gt; Array &amp;12 ()
+            'review' =&gt; Array &amp;13 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        4 =&gt; Array &amp;14 (
+            'id' =&gt; 27
+            'isbn' =&gt; '9786460354549'
+            'title' =&gt; 'At libero aut dolorem.'
+            'description' =&gt; 'Dolores non natus illum quia repellendus et eaque ut. Rem voluptatem sint corporis repudiandae aspernatur sit. Illo sed maiores ea. Quod provident officiis et est.'
+            'authors' =&gt; Array &amp;15 ()
+            'review' =&gt; Array &amp;16 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        5 =&gt; Array &amp;17 (
+            'id' =&gt; 28
+            'isbn' =&gt; '9784051372224'
+            'title' =&gt; 'Dolores unde magnam iusto architecto voluptates voluptate nihil vel.'
+            'description' =&gt; 'Consequatur omnis quae eum dolore a aliquam impedit quibusdam. Excepturi alias asperiores magni delectus sequi soluta. Nam adipisci consequatur maxime qui assumenda quia nihil.'
+            'authors' =&gt; Array &amp;18 ()
+            'review' =&gt; Array &amp;19 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        6 =&gt; Array &amp;20 (
+            'id' =&gt; 29
+            'isbn' =&gt; '9780584138320'
+            'title' =&gt; 'Consequuntur officiis aperiam excepturi autem exercitationem et molestiae.'
+            'description' =&gt; 'Qui nisi mollitia dolorum excepturi et. Rerum autem ut aliquid at voluptas. Accusantium repellat error labore debitis.'
+            'authors' =&gt; Array &amp;21 ()
+            'review' =&gt; Array &amp;22 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        7 =&gt; Array &amp;23 (
+            'id' =&gt; 30
+            'isbn' =&gt; '9787750625530'
+            'title' =&gt; 'Est commodi aut cupiditate unde quia.'
+            'description' =&gt; 'Mollitia doloribus quo est pariatur voluptatem laborum non. Similique est voluptas qui autem dicta aperiam vero. Corporis quia optio aut corporis dolorem.'
+            'authors' =&gt; Array &amp;24 ()
+            'review' =&gt; Array &amp;25 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        8 =&gt; Array &amp;26 (
+            'id' =&gt; 31
+            'isbn' =&gt; '9787690053301'
+            'title' =&gt; 'Labore dolorem aliquam nihil.'
+            'description' =&gt; 'Voluptate ratione blanditiis omnis rerum suscipit et voluptatem minus. Qui culpa mollitia quia et dolorum soluta quis itaque. Aut eos optio repellat et facere. Ut ipsa quia veniam nostrum qui et id.'
+            'authors' =&gt; Array &amp;27 ()
+            'review' =&gt; Array &amp;28 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        9 =&gt; Array &amp;29 (
+            'id' =&gt; 32
+            'isbn' =&gt; '9793691745619'
+            'title' =&gt; 'Repellat sit repellendus odit et et ut omnis.'
+            'description' =&gt; 'Et est ullam voluptatem eos neque. Eos pariatur eum inventore sed ea. Qui et quam ab consequatur non delectus ullam. Omnis eum eveniet voluptate et esse placeat.'
+            'authors' =&gt; Array &amp;30 ()
+            'review' =&gt; Array &amp;31 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        10 =&gt; Array &amp;32 (
+            'id' =&gt; 33
+            'isbn' =&gt; '9785055037553'
+            'title' =&gt; 'Voluptatem fugit aut ducimus.'
+            'description' =&gt; 'Similique id ratione eos ad ex vero nam. Porro alias commodi ea optio rerum fugit. Explicabo vitae est eaque ratione.'
+            'authors' =&gt; Array &amp;33 ()
+            'review' =&gt; Array &amp;34 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        11 =&gt; Array &amp;35 (
+            'id' =&gt; 34
+            'isbn' =&gt; '9783407622327'
+            'title' =&gt; 'Dolorem quia modi voluptatem voluptas.'
+            'description' =&gt; 'Qui voluptatem quisquam qui esse. Libero eos vel eius nesciunt fugit. Vel quis placeat omnis temporibus quidem vitae exercitationem. Et suscipit veritatis veritatis velit hic molestiae.'
+            'authors' =&gt; Array &amp;36 ()
+            'review' =&gt; Array &amp;37 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        12 =&gt; Array &amp;38 (
+            'id' =&gt; 35
+            'isbn' =&gt; '9780033881272'
+            'title' =&gt; 'Ducimus est alias rerum laborum molestiae pariatur.'
+            'description' =&gt; 'Harum minima velit nobis ut et numquam. Eos aut modi omnis quam nulla iure sunt. Totam odio vitae fuga sit magnam laboriosam autem animi.'
+            'authors' =&gt; Array &amp;39 ()
+            'review' =&gt; Array &amp;40 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        13 =&gt; Array &amp;41 (
+            'id' =&gt; 36
+            'isbn' =&gt; '9799045096154'
+            'title' =&gt; 'Doloribus et aut debitis commodi ipsa.'
+            'description' =&gt; 'Consequuntur sunt molestias debitis. Quis et quia cupiditate. Voluptatibus provident nisi commodi quis ut.'
+            'authors' =&gt; Array &amp;42 ()
+            'review' =&gt; Array &amp;43 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+        14 =&gt; Array &amp;44 (
+            'id' =&gt; 37
+            'isbn' =&gt; '9794953771049'
+            'title' =&gt; 'Voluptatem quam ratione modi molestiae deleniti pariatur qui.'
+            'description' =&gt; 'Omnis explicabo sapiente aut ea doloremque. Voluptatem nulla ut sit id laboriosam est. Rerum doloribus aliquam quisquam nulla vel et asperiores.'
+            'authors' =&gt; Array &amp;45 ()
+            'review' =&gt; Array &amp;46 (
+                'avg' =&gt; 0
+                'count' =&gt; 0
+            )
+        )
+    )
+).
+--- Expected
++++ Actual
+@@ @@
+ array (
+   'data' =&gt; 
+   array (
+-    0 =&gt; 
+-    array (
+-      'id' =&gt; 23,
+-      'isbn' =&gt; '9787324065489',
+-      'title' =&gt; 'Amet quo quos consequatur deserunt omnis qui.',
+-      'description' =&gt; 'Quos quo ut illum. Velit minima enim ea excepturi similique. Culpa facilis exercitationem eos tempore. Blanditiis minus ut deleniti.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    1 =&gt; 
+-    array (
+-      'id' =&gt; 24,
+-      'isbn' =&gt; '9792957957049',
+-      'title' =&gt; 'Sed laboriosam ipsa consequatur exercitationem.',
+-      'description' =&gt; 'Blanditiis et voluptatem nisi architecto ut vero. Voluptatum asperiores sed sunt. Dolores impedit iusto quia nisi omnis molestias culpa.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    2 =&gt; 
+-    array (
+-      'id' =&gt; 25,
+-      'isbn' =&gt; '9781560498223',
+-      'title' =&gt; 'Molestiae beatae omnis placeat eos.',
+-      'description' =&gt; 'Corrupti perferendis est voluptas eos atque id est. Sunt natus repellendus enim quia blanditiis aut qui. Vel qui voluptatem vel quae nemo. Modi fuga sit quia tenetur dolor et nostrum.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    3 =&gt; 
+-    array (
+-      'id' =&gt; 26,
+-      'isbn' =&gt; '9786037451213',
+-      'title' =&gt; 'Et dolorem culpa et nobis.',
+-      'description' =&gt; 'Quisquam molestiae atque ducimus recusandae quo. Iusto beatae quod laborum hic dolorem voluptate delectus.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    4 =&gt; 
+-    array (
+-      'id' =&gt; 27,
+-      'isbn' =&gt; '9786460354549',
+-      'title' =&gt; 'At libero aut dolorem.',
+-      'description' =&gt; 'Dolores non natus illum quia repellendus et eaque ut. Rem voluptatem sint corporis repudiandae aspernatur sit. Illo sed maiores ea. Quod provident officiis et est.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    5 =&gt; 
+-    array (
+-      'id' =&gt; 28,
+-      'isbn' =&gt; '9784051372224',
+-      'title' =&gt; 'Dolores unde magnam iusto architecto voluptates voluptate nihil vel.',
+-      'description' =&gt; 'Consequatur omnis quae eum dolore a aliquam impedit quibusdam. Excepturi alias asperiores magni delectus sequi soluta. Nam adipisci consequatur maxime qui assumenda quia nihil.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    6 =&gt; 
+-    array (
+-      'id' =&gt; 29,
+-      'isbn' =&gt; '9780584138320',
+-      'title' =&gt; 'Consequuntur officiis aperiam excepturi autem exercitationem et molestiae.',
+-      'description' =&gt; 'Qui nisi mollitia dolorum excepturi et. Rerum autem ut aliquid at voluptas. Accusantium repellat error labore debitis.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    7 =&gt; 
+-    array (
+-      'id' =&gt; 30,
+-      'isbn' =&gt; '9787750625530',
+-      'title' =&gt; 'Est commodi aut cupiditate unde quia.',
+-      'description' =&gt; 'Mollitia doloribus quo est pariatur voluptatem laborum non. Similique est voluptas qui autem dicta aperiam vero. Corporis quia optio aut corporis dolorem.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    8 =&gt; 
+-    array (
+-      'id' =&gt; 31,
+-      'isbn' =&gt; '9787690053301',
+-      'title' =&gt; 'Labore dolorem aliquam nihil.',
+-      'description' =&gt; 'Voluptate ratione blanditiis omnis rerum suscipit et voluptatem minus. Qui culpa mollitia quia et dolorum soluta quis itaque. Aut eos optio repellat et facere. Ut ipsa quia veniam nostrum qui et id.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    9 =&gt; 
+-    array (
+-      'id' =&gt; 32,
+-      'isbn' =&gt; '9793691745619',
+-      'title' =&gt; 'Repellat sit repellendus odit et et ut omnis.',
+-      'description' =&gt; 'Et est ullam voluptatem eos neque. Eos pariatur eum inventore sed ea. Qui et quam ab consequatur non delectus ullam. Omnis eum eveniet voluptate et esse placeat.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    10 =&gt; 
+-    array (
+-      'id' =&gt; 33,
+-      'isbn' =&gt; '9785055037553',
+-      'title' =&gt; 'Voluptatem fugit aut ducimus.',
+-      'description' =&gt; 'Similique id ratione eos ad ex vero nam. Porro alias commodi ea optio rerum fugit. Explicabo vitae est eaque ratione.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    11 =&gt; 
+-    array (
+-      'id' =&gt; 34,
+-      'isbn' =&gt; '9783407622327',
+-      'title' =&gt; 'Dolorem quia modi voluptatem voluptas.',
+-      'description' =&gt; 'Qui voluptatem quisquam qui esse. Libero eos vel eius nesciunt fugit. Vel quis placeat omnis temporibus quidem vitae exercitationem. Et suscipit veritatis veritatis velit hic molestiae.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    12 =&gt; 
+-    array (
+-      'id' =&gt; 35,
+-      'isbn' =&gt; '9780033881272',
+-      'title' =&gt; 'Ducimus est alias rerum laborum molestiae pariatur.',
+-      'description' =&gt; 'Harum minima velit nobis ut et numquam. Eos aut modi omnis quam nulla iure sunt. Totam odio vitae fuga sit magnam laboriosam autem animi.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    13 =&gt; 
+-    array (
+-      'id' =&gt; 36,
+-      'isbn' =&gt; '9799045096154',
+-      'title' =&gt; 'Doloribus et aut debitis commodi ipsa.',
+-      'description' =&gt; 'Consequuntur sunt molestias debitis. Quis et quia cupiditate. Voluptatibus provident nisi commodi quis ut.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+-    14 =&gt; 
+-    array (
+-      'id' =&gt; 37,
+-      'isbn' =&gt; '9794953771049',
+-      'title' =&gt; 'Voluptatem quam ratione modi molestiae deleniti pariatur qui.',
+-      'description' =&gt; 'Omnis explicabo sapiente aut ea doloremque. Voluptatem nulla ut sit id laboriosam est. Rerum doloribus aliquam quisquam nulla vel et asperiores.',
+-      'authors' =&gt; 
+-      array (
+-      ),
+-      'review' =&gt; 
+-      array (
+-        'avg' =&gt; 0,
+-        'count' =&gt; 0,
+-      ),
+-    ),
+   ),
+ )
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Assert.php:40
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:443
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:206
+/home/elizabeth/Laravel/books_api/tests/Feature/BookListTest.php:193
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Tests\Feature\BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" tests="25" assertions="25" errors="0" failures="25" skipped="0" time="1.696296">
+      <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="13" assertions="1" time="0.111057">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testDenyGuestAccess
+Expected status code 401 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:24
+</failure>
+      </testcase>
+      <testcase name="testDenyNonAdminUserAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="27" assertions="1" time="0.116744">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testDenyNonAdminUserAccess
+Expected status code 403 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:41
+</failure>
+      </testcase>
+      <testcase name="testSuccessfulPost" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="44" assertions="1" time="0.065971">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testSuccessfulPost
+Expected status code 201 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:59
+</failure>
+      </testcase>
+      <testsuite name="Tests\Feature\BookPostTest::testValidation" tests="22" assertions="22" errors="0" failures="22" skipped="0" time="1.402524">
+        <testcase name="testValidation with data set #0" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066035">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #0 (array(null), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #1" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.065851">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #1 (array(''), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #2" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.057499">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #2 (array('9788328302341'), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #3" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066268">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #3 (array('978832830234'), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #4" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.065699">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #4 (array('97883283023422'), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #5" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.058049">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #5 (array(array()), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #6" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066483">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #6 (array(array(673890)), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #7" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.065832">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #7 (array(array('978832830234')), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #8" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.065938">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #8 (array('FCKGWRHQQ2'), 'isbn')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #9" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066003">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #9 (array(null), 'title')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #10" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066201">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #10 (array(''), 'title')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #11" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.065935">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #11 (array(array()), 'title')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #12" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066424">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #12 (array(null), 'description')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #13" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.065819">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #13 (array(''), 'description')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #14" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.065935">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #14 (array(array()), 'description')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #15" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066035">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #15 (array(null), 'authors')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #16" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066122">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #16 (array(array()), 'authors')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #17" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.066013">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #17 (array(''), 'authors')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #18" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.057665">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #18 (array(1), 'authors')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #19" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.057694">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #19 (array(array(999999)), 'authors.0')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #20" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.057789">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #20 (array(array(array())), 'authors.0')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #21" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.057235">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #21 (array(array(null)), 'authors.0')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookPostTest.php:91
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Tests\Feature\BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" tests="12" assertions="12" errors="0" failures="12" skipped="0" time="0.760605">
+      <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="14" assertions="1" time="0.049319">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testDenyGuestAccess
+Expected status code 401 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:23
+</failure>
+      </testcase>
+      <testcase name="testError404OnInvalidBookId" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="26" assertions="1" time="0.058018">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testError404OnInvalidBookId
+Expected status code 404 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:37
+</failure>
+      </testcase>
+      <testcase name="testSuccessfulPost" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="40" assertions="1" time="0.057777">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testSuccessfulPost
+Expected status code 201 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:53
+</failure>
+      </testcase>
+      <testsuite name="Tests\Feature\BookReviewTest::testValidation" tests="9" assertions="9" errors="0" failures="9" skipped="0" time="0.595491">
+        <testcase name="testValidation with data set #0" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.091373">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #0 (array(null), 'review')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #1" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.082832">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #1 (array(''), 'review')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #2" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.057250">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #2 (array(0), 'review')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #3" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.066265">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #3 (array(11), 'review')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #4" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.057684">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #4 (array(3.5), 'review')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #5" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.057899">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #5 (array(array()), 'review')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #6" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.057943">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #6 (array(null), 'comment')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #7" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.057841">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #7 (array(''), 'comment')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+        <testcase name="testValidation with data set #8" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php" line="77" assertions="1" time="0.066404">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #8 (array(array()), 'comment')
+Expected status code 422 but received 200.
+Failed asserting that false is true.
+
+/home/elizabeth/Laravel/books_api/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php:151
+/home/elizabeth/Laravel/books_api/tests/Feature/BookReviewTest.php:92
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
